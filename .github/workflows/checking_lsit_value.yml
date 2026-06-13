@@ -14,4 +14,4 @@ jobs:
   runs-on: ubuntu-latest
   steps:
     - name: checking the drop down value
-      run: echo "listing dropdown selected value ${{inputs.enviornment}}"
+      run: echo "listing dropdown selected value ${{ inputs.environment }}"
