@@ -1,0 +1,16 @@
+name: test the basic github flow
+on: workflow_dispatch
+env:
+  APP_NAME: 'test'
+jobs:
+  test_jobname:
+   runs-on: ubuntu-latest
+   env:
+    APP_NAME: 'stage'
+   steps:       
+       - name: checking the value
+         run: echo "hi"
+       - name: checking input value
+         env:
+          APP_NAME: 'prod'
+         run: echo "$APP_NAME"
