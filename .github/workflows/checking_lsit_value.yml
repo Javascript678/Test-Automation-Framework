@@ -1,0 +1,17 @@
+name: checking inputs option
+on: 
+  workflow_dispatch:
+   inputs:
+    environment:
+     description: 'check the drop down values'
+     type: choice
+     options: 
+     - test
+     - stage
+     - prod   
+jobs:
+ check_dropdown:
+  runs-on: ubuntu-latest
+  steps:
+    - name: checking the drop down value
+      run: echo "listing dropdown selected value ${{inputs.enviornment}}"
